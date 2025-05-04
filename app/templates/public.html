@@ -166,7 +166,7 @@
             {% endif %}
 
             <div class="post-content">
-                {{ post.content[:200] }}{% if post.content|length > 200 %}...{% endif %}
+                {{ post.content[:200]|safe}}{% if post.content|length > 200 %}...{% endif %}
             </div>
 
             <a class="read-more" href="{{ url_for('blog.post', post_id=post.id) }}">Read More</a>
